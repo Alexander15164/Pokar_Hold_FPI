@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="FPI group">
+    <meta name="description" content="Proyecto a evaluar en el primer parcial de la materia de FPI en la Universidad de El Salvador Facultad Multidiplinaria de Occidente">
+    <meta name="generator" content="Atom">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+
+    <link rel="stylesheet" href="CSS/styleindex.css">
+    <script type="text/javascript" src="JAVASCRIPT/function.js"></script>
+    <title>index</title>
+
+  </head>
+  <body>
+    <div class="botoness" id="primera">
+      <input type="button" class="btnprimario" value="Iniciar Juego" id="btnJugar"onclick="llamarsegunda()"/>
+      <input type="button" class="btnprimario" value="Acerca de" id="btnAcerca"/>
+      <input type="button" class="btnprimario" value="Ayuda" id="btnAyuda"/>
+      <br>
+    </div>
+    <div id="segundaI">
+
+      <header>
+        <h1>Juego de Poker Texas Hold'em</h1>
+      </header>
+      <section>
+        <label for="jugadores">Ingesa el numero de jugadores:</label>
+        <input id="jugadores" type="text" name="numero" value="" autofocus required>
+      </section>
+      <section>
+        <input type="button" name="ingresar" value="Ingresar Jugadores" onclick="ingresoJugadores()">
+        <input type="submit" name="jugar" value="Jugar" id="jugar" onclick="formIngreso()" disabled>
+
+      </section>
+
+    </div>
+    <div id="segundaII">
+      <div class="jugador" id="j1">
+        <label>Jugador 1:</label>
+        <input type="text" name="jugadorUno" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j2">
+        <label>Jugador 2:</label>
+        <input type="text" name="jugadorDos" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j3">
+        <label>Jugador 3:</label>
+        <input type="text" name="jugadorTres" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j4">
+        <label>Jugador 4:</label>
+        <input type="text" name="jugadorCuatro" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j5">
+        <label>Jugador 5:</label>
+        <input type="text" name="jugadorCinco" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j6">
+        <label>Jugador 6:</label>
+        <input type="text" name="jugadorSeis" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j7">
+        <label>Jugador 7:</label>
+        <input type="text" name="jugadorSiete" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j8">
+        <label>Jugador 8:</label>
+        <input type="text" name="jugadorOcho" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j9">
+        <label>Jugador 9:</label>
+        <input type="text" name="jugadorNueve" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <div class="jugador" id="j10">
+        <label>Jugador 10:</label>
+        <input type="text" name="jugadorDiez" value="">
+        <br>
+        <label>Cantidad $:</label>
+        <input type="text" name="apuesta" value="">
+        <br><br>
+      </div>
+      <input type="button" name="" value="Empezar el juego" onclick="cargarTercera()"/>
+    </div>
+    <div id="tercera">
+      <div class="capasJ1" id="div2">
+        JUGADOR 1
+      </div>
+      <diV class="capasJ1" id="div3">
+        JUGADOR 2
+      </div>
+      <div class="capasJ1" id="div4">
+        JUGADOR 3
+      </div>
+      <div class="capasJ1" id="div5">
+        JUGADOR 4
+      </div>
+      <div class="capasJ2" id="div6">
+        JUGADOR5
+      </div>
+      <div class="capascentral"id="divcentral">
+        CENTRO DE CARTAS
+      </div>
+      <div class="capasJ3" id="div7">
+        JUGADOR 6
+      </div>
+      <div class="capasJ4" id="div8">
+        JUGADOR7</div>
+      <div class="capasJ4" id="div9">
+       JUGADOR 8
+      </div>
+      <div class="capasJ4" id="div10">
+       JUGADOR 9
+      </div>
+      <div class="capasJ4" id="div11">
+       JUGADOR 1O
+      </div>
+      <div class="capasB" id="btn">
+        BOTONES
+      </div>
+    </div>
+
+  </body>
+</html>
