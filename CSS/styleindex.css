@@ -70,7 +70,7 @@ body{
   width: 70%;
   height: 70%;
   background: #EEE9E9;
-box-shadow: 10px 20px 10px #0669b2;
+box-shadow: 10px 20px 10px grey;
   -webkit-border-radius: 50;
   -moz-border-radius: 50;
   border-radius: 100px;
@@ -81,14 +81,14 @@ box-shadow: 10px 20px 10px #0669b2;
   position: absolute;
   top:8%;
   left:15%;
-  color: white;
+  color: black;
   font-size: 45px;
 }
 #centrar1{
   position: absolute;
   top:40%;
   left:25%;
-  color: white;
+  color: black;
 }
 #centrar2{
   position: absolute;

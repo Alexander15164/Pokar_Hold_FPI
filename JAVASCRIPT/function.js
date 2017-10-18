@@ -1,7 +1,7 @@
 //Muestra segundo
   function llamarsegunda(){
       /*document.body.style.backgroundColor="#55090A";*/
-      document.body.style.backgroundImage="url(PICTURES/fondo20.jpg)";
+      document.body.style.backgroundImage="url(PICTURES/477025.jpg)";
 
       document.getElementById("primera").style.display="none";
       document.getElementById("segundaI").style.display="block";
@@ -17,7 +17,7 @@
   }
 //Despliega los jugadores ingresados
   function formIngreso(){
-      document.body.style.backgroundImage="url(PICTURES/fondo3.jpg)";
+      document.body.style.backgroundImage="url(PICTURES/477025.jpg)";
       document.getElementById("segundaI").style.display="none";
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
