@@ -4,13 +4,7 @@
 //Para index.html
 var p;
 var cartasDisponibles;
-<<<<<<< HEAD
 var oCartas = new Array();
-=======
-
-
-
->>>>>>> 28fae16329b9998426f4a65bdd031654a6e613dc
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
@@ -83,23 +77,30 @@ function posicionamiento() {
     document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
+//llenador de cartas en un arreglo global
 function llenarCartasDisponibles() {
-
-  for (var y = 0; y < 52; y++) {
-    var iCarta = obtenerCarta();
-    iCarta = String(iCarta);
-    var iFamilia = obtenerFamilia();
-    iCarta = String(iFamilia);
-      cartasDisponibles.push("PICTURES/img/"+iFamilia+"/"+iCarta+".jpg");
-      oCartas.push(iFamilia+iCarta);
+  var iIteracion = 0;
+while (iIteracion < 52) {
+  var oCarta = new cartas();
+if (iIteracion==0) {
+  oCartas[iIteracion]= oCarta;
+  iIteracion= iIteracion+1;
+}else {
+  if (oCarta.valor != oCartas[iIteracion-1].valor && oCarta.familia != oCartas[iIteracion-1].familia) {
+      oCartas[iIteracion]= oCarta;
+      iIteracion= iIteracion+1;
+  }else {
   }
 }
+}
+imprimir();
+  }
 
 function Jugador(sNombre,iApusta,sPuesto) {
   this.nombre = sNombre;
   this.apuesta = iApusta;
-  this.carta1 = obtenerCarta();
-  this.carta2 = obtenerCarta();
+  this.carta1 = darCartas();
+  this.carta2 = darCartas();
   this.puesto = sPuesto;
 }
 
@@ -109,7 +110,7 @@ function obtenerCarta(){
 }
 
 function obtenerFamilia(){
-  var familia = Math.ceil(Math.random()*4+1);
+  var familia = Math.ceil(Math.random()*3+1);
   return familia;
 }
 
@@ -119,9 +120,35 @@ function probar() {
   }
 }
 //sistema de posicionsmiento de imagenes
-function imagenes(){
-  var iJugadores= numero();
-  for (var i = 0; i < iJugadores; i++) {
+function imagenes(){}
 
+function cartas() {
+  this.familia = obtenerFamilia();
+  this.valor = obtenerCarta();
+  this.direccion = obtenerDirecion(this.familia,this.valor);
+  this.color = obtenerColor(this.familia);
+}
+function obtenerColor(iFamilia) {
+  if (iFamilia==0 || iFamilia==2) {
+    return 1;//rojo
+  }else {
+    return 2;//negro
   }
-    }
+}
+function obtenerDirecion(sFamilia,sValor) {
+sValor = String(sValor);
+sFamilia = String(sFamilia);
+var sImagen = "PICTURES/img/"+sFamilia+"/"+sValor+".jpg";
+return sImagen;
+}
+function darCartas() {
+  var iCarta = oCartas.pop();
+  return iCarta;
+}
+//testing
+function imprimir() {
+  for (var i = 0; i < oCartas.length; i++) {
+    console.log(oCartas[i].familia+oCartas[i].valor);
+  
+  }
+}
