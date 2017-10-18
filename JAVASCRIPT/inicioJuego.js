@@ -1,34 +1,17 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //Heho por: Edwin Figueroa
 //Modificado por katiro
 //Para index.html
 var p;
 var cartasDisponibles;
-//<<<<<<< HEAD
-
-//=======
 var oCartas = new Array();
-=======
-//Hecho por: Edwin Figueroa
-//Para index.html
-var p;
-var cartasDisponibles;
-
-
->>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
-<<<<<<< HEAD
-//>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
-=======
-
->>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 //Para jugadores.html
-
 function botonJugar(){
   p = document.getElementById("principal");
   cartasDisponibles = new Array();
@@ -60,7 +43,7 @@ function jugadores() {
 
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
   document.getElementById("empezar").disabled = false;
@@ -70,9 +53,7 @@ if (iControl==iJugadores) {
 
 }else {
   return ;
-}
-=======
-  if (iControl==iJugadores) {
+}if (iControl==iJugadores) {
     document.getElementById("siguiente").disabled = true;
     document.getElementById("empezar").disabled = false;
     document.getElementById("jugador").disabled=true;
@@ -84,7 +65,6 @@ if (iControl==iJugadores) {
   }else {
     return ;
   }
->>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 }
 //limpia los controles HTML
 function limpiar() {
