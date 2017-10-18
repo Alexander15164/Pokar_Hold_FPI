@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Heho por: Edwin Figueroa
 //Modificado por katiro
 //Para index.html
@@ -7,22 +8,37 @@ var cartasDisponibles;
 
 //=======
 var oCartas = new Array();
+=======
+//Hecho por: Edwin Figueroa
+//Para index.html
+var p;
+var cartasDisponibles;
+
+
+>>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
+<<<<<<< HEAD
 //>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
+=======
+
+>>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 //Para jugadores.html
 
 function botonJugar(){
   p = document.getElementById("principal");
   cartasDisponibles = new Array();
-  llenarCartasDisponibles();
+  llenarCartasDisponibles();    // test
+    //console.log(oJugadores[iControlador].nombre);
+    //console.log(oJugadores[iControlador].puesto);
 }
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
+var iSumaJugador=2;
 function jugadores() {
     var iJugadores = numero();
     var sNombre = document.getElementById("jugador").value;
@@ -37,10 +53,14 @@ function jugadores() {
     limpiar();
     iControlador= iControlador + 1;
     controlador(iControlador,iJugadores);
+
+    document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
+    iSumaJugador++;
   }
 
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
+<<<<<<< HEAD
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
   document.getElementById("empezar").disabled = false;
@@ -51,6 +71,20 @@ if (iControl==iJugadores) {
 }else {
   return ;
 }
+=======
+  if (iControl==iJugadores) {
+    document.getElementById("siguiente").disabled = true;
+    document.getElementById("empezar").disabled = false;
+    document.getElementById("jugador").disabled=true;
+    document.getElementById("apuesta").disabled=true;
+    //document.getElementById("sumaJugador").innerHTML="Fin";
+    //document.getElementById("cantidadApuesta").innerHTML="Fin";
+    //test
+    //console.log(oJugadores[2].nombre);
+  }else {
+    return ;
+  }
+>>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
 }
 //limpia los controles HTML
 function limpiar() {
