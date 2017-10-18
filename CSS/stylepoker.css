@@ -1,0 +1,79 @@
+body{
+  background:#8ba987;
+  background: url('/PICTURES/477025.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.capasJ1{
+    border: 0px solid  #E5E7E9 ;
+    width: 25%;
+    height: 140px;
+    float: left;
+    color: #FFF;
+    text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* PARA EL CHAT
+.capasC{
+    border: 1px solid #000;
+    width: 24%;
+    height: 600px;
+    color: #FFF;
+    text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+}*/
+.capasJ2{
+  /*border: 0.5px solid  #E5E7E9 ;]*/
+  width: 25%;
+  height: 240px;
+  float: left;
+  color: #FFF;
+  text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  font-size: 25px;
+  font-weight: bold;
+}
+#divcentral{
+  /*border: 1px solid  #d35400 ;*/
+  width: 50%;
+  height: 240px;
+  float: left;
+  color: #FFF;
+  text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  font-size: 25px;
+  font-weight: bold;
+}
+.capasJ3{
+  /*border: 1px solid  #E5E7E9 ;*/
+  width: 25%;
+  height: 240px;
+  float: left;
+  color: #FFF;
+  text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  font-size: 25px;
+  font-weight: bold;
+}
+.capasJ4{
+  /*border: 1px solid  #E5E7E9 ;*/
+  width: 25%;
+  height: 120px;
+  float: left;
+  color: #FFF;
+  text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  font-size: 25px;
+  font-weight: bold;
+}
+#btn{
+  /*border: 1px solid  #E5E7E9 ;*/
+  width: 100%;
+  height: 40px;
+  float: left;
+  color: #FFF;
+  text-shadow: 0 0 0.2em #00FFFF, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  font-size: 25px;
+  font-weight: bold;
+}

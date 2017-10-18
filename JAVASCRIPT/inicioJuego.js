@@ -2,16 +2,16 @@
 //Para index.html
 var p;
 var cartasDisponibles;
-<<<<<<< HEAD
 
-=======
+
+
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
->>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
+
 //Para jugadores.html
 
 function botonJugar(){
