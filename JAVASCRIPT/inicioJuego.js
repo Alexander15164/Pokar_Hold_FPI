@@ -2,16 +2,15 @@
 //Para index.html
 var p;
 var cartasDisponibles;
-<<<<<<< HEAD
 
-=======
+
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
->>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
+
 //Para jugadores.html
 
 function botonJugar(){
@@ -39,14 +38,14 @@ function jugadores() {
 
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
-if (iControl==iJugadores) {
-  document.getElementById("siguiente").disabled = true;
-  document.getElementById("empezar").disabled = false;
-  //test
-  //console.log(oJugadores[2].nombre);
-}else {
-  return ;
-}
+  if (iControl==iJugadores) {
+    document.getElementById("siguiente").disabled = true;
+    document.getElementById("empezar").disabled = false;
+    //test
+    //console.log(oJugadores[2].nombre);
+  }else {
+    return ;
+  }
 }
 //limpia los controles HTML
 function limpiar() {
