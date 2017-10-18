@@ -2,15 +2,62 @@
 //Para index.html
 var p;
 var cartasDisponibles;
+<<<<<<< HEAD
 
+=======
+var oJugadores= new Array();
+//toma el numero de jugadores en forma global para el uso de esta variable en funciones
+function numero() {
+  var iJugadores= document.getElementById("jugadores").value;
+  return iJugadores;
+}
+>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
 //Para jugadores.html
 
 function botonJugar(){
   p = document.getElementById("principal");
   cartasDisponibles = new Array();
   llenarCartasDisponibles();
+}
+//para el control del ingreso a datos de los jugadores
+var iControlador = 0; //variable controladora para la funcion jugadores
+function jugadores() {
+    var iJugadores = numero();
+    var sNombre = document.getElementById("jugador").value;
+    var iApuesta = document.getElementById("apuesta").value;
+    var sPosicion = "div"+(iControlador+2);
+    // test
+    //console.log(sPosicion);
+    oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
+    // test
+    //console.log(oJugadores[iControlador].nombre);
+    //console.log(oJugadores[iControlador].puesto);
+    limpiar();
+    iControlador= iControlador + 1;
+    controlador(iControlador,iJugadores);
+  }
 
-
+//desabilita los botones de la toma de estos para el control de numero de jugadores
+function controlador(iControl,iJugadores) {
+if (iControl==iJugadores) {
+  document.getElementById("siguiente").disabled = true;
+  document.getElementById("empezar").disabled = false;
+  //test
+  //console.log(oJugadores[2].nombre);
+}else {
+  return ;
+}
+}
+//limpia los controles HTML
+function limpiar() {
+  document.getElementById("apuesta").value = " ";
+  document.getElementById("jugador").value = " ";
+}
+function posicionamiento() {
+  var iJugadores = numero();
+  for (var i = 0; i < iJugadores; i++) {
+    document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
+  }
 }
 
 function llenarCartasDisponibles() {
@@ -22,11 +69,12 @@ function llenarCartasDisponibles() {
   }
 }
 
-function Jugador(sNombre) {
+function Jugador(sNombre,iApusta,sPuesto) {
   this.nombre = sNombre;
   this.apuesta = iApusta;
   this.carta1 = obtenerCarta();
   this.carta2 = obtenerCarta();
+  this.puesto = sPuesto;
 }
 
 function obtenerCarta(){

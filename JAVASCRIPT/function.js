@@ -18,6 +18,7 @@
       document.getElementById("segundaI").style.display="none";
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
+<<<<<<< HEAD
       for (var i = 1; i <=dato; i++) {
         document.getElementById("j"+i).style.display="block";
       }
@@ -33,3 +34,17 @@
   function apuestas(){
     
   }
+=======
+    //  for (var i = 1; i <=dato; i++) {
+     document.getElementById("j1").style.display="block";
+   //}
+  }
+
+   function cargarTercera(){
+     console.log("llego aqui");
+     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+     document.getElementById("segundaII").style.display="none";
+     document.getElementById("tercera").style.display="block";
+     posicionamiento();
+   }
+>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
