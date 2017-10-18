@@ -18,8 +18,9 @@
       document.getElementById("segundaI").style.display="none";
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
-      for (var i = 1; i <=dato; i++) {
-        document.getElementById("j"+i).style.display="block";}
+    //  for (var i = 1; i <=dato; i++) {
+     document.getElementById("j1").style.display="block";
+   //}
   }
 
    function cargarTercera(){
