@@ -1,10 +1,12 @@
 //Heho por: Edwin Figueroa
+//Modificado por katiro
 //Para index.html
 var p;
 var cartasDisponibles;
 //<<<<<<< HEAD
 
 //=======
+var oCartas = new Array();
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
@@ -30,8 +32,8 @@ function jugadores() {
     //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
     // test
-    console.log(oJugadores[iControlador].nombre);
-    console.log(oJugadores[iControlador].puesto);
+    //console.log(oJugadores[iControlador].nombre);
+    //console.log(oJugadores[iControlador].carta1);
     limpiar();
     iControlador= iControlador + 1;
     controlador(iControlador,iJugadores);
@@ -44,6 +46,8 @@ if (iControl==iJugadores) {
   document.getElementById("empezar").disabled = false;
   //test
   //console.log(oJugadores[2].nombre);
+  console.log(oJugadores[2].carta1);
+
 }else {
   return ;
 }
@@ -59,13 +63,15 @@ function posicionamiento() {
     document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
-
 function llenarCartasDisponibles() {
 
-  for (var y = 0; y < 4; y++) {
-    for (var x = 1; x < 14; x++) {
-      cartasDisponibles.push("PICTURES/img/"+y+"/"+x+".jpg");
-    }
+  for (var y = 0; y < 52; y++) {
+    var iCarta = obtenerCarta();
+    iCarta = String(iCarta);
+    var iFamilia = obtenerFamilia();
+    iCarta = String(iFamilia);
+      cartasDisponibles.push("PICTURES/img/"+iFamilia+"/"+iCarta+".jpg");
+      oCartas.push(iFamilia+iCarta);
   }
 }
 
@@ -92,3 +98,10 @@ function probar() {
     p.innerHTML += cartasDisponibles[i]+"</br>";
   }
 }
+//sistema de posicionsmiento de imagenes
+function imagenes(){
+  var iJugadores= numero();
+  for (var i = 0; i < iJugadores; i++) {
+
+  }
+    }
