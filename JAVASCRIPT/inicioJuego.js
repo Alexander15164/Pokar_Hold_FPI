@@ -4,7 +4,13 @@
 //Para index.html
 var p;
 var cartasDisponibles;
+<<<<<<< HEAD
 var oCartas = new Array();
+=======
+
+
+
+>>>>>>> 28fae16329b9998426f4a65bdd031654a6e613dc
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {

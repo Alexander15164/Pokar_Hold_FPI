@@ -60,7 +60,7 @@
     return iApustaJ;
   }
   function totalApuesta(){
-    
+
   }
 /////////////////////////////
   function cargarTercera(){
