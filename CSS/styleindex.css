@@ -1,3 +1,4 @@
+/*CSS para la pagina incial*/
 body{
 background:#8ba987;
 background: url("../PICTURES/poker2.jpg") no-repeat center center fixed ;
@@ -6,7 +7,6 @@ background: url("../PICTURES/poker2.jpg") no-repeat center center fixed ;
 -o-background-size: cover;
 background-size: cover;
 }
-
 #segundaI{
   display: none;
 }
@@ -19,13 +19,11 @@ background-size: cover;
 #tercera{
   display: none;
 }
-
-
 .btnprimario {
   -webkit-border-radius: 16;
   -moz-border-radius: 16;
   border-radius: 30px;
-  font-family: "Dopestyle";
+  font-family: monospace;
   color: white;
   font-weight: bold;
   font-size: 240%;
@@ -35,16 +33,16 @@ background-size: cover;
   padding-right: 2%;
   padding-bottom: 2%;
   padding-left: 4%;
-  border: 5px solid grey;
-}
+  border: 4.5px solid grey;
 
+}
 .btnprimario:hover {
   background: #171BC7;
-    background-image: -webkit-linear-gradient(top, #E7DB88, #CDB717);
+    background-image: -webkit-linear-gradient(top, #68a1b8, #68a1b8);
     background-image: -moz-linear-gradient(top,  #68a1b8 ,  #68a1b8 );
-    background-image: -ms-linear-gradient(top, #E7DB88, #CDB717);
-    background-image: -o-linear-gradient(top, #E7DB88, #CDB717);
-    background-image: linear-gradient(to bottom,  #68a1b8 ,  #68a1b8 S);
+    background-image: -ms-linear-gradient(top, #68a1b8, #68a1b8);
+    background-image: -o-linear-gradient(top, #68a1b8, #68a1b8);
+    background-image: linear-gradient(to bottom,  #68a1b8 ,  #68a1b8);
     border: 2px solid grey ;
 
 
@@ -63,4 +61,44 @@ background-size: cover;
   position: absolute;
   top: 63%;
   left: 13.8%;
+}
+#primera{
+
+}
+
+/*CSS para la pagina secundaria*/
+#segundaI{
+  border: 3px solid grey;
+  position: absolute;
+  top:17%;
+  left:14.5%;
+  width: 70%;
+  height: 70%;
+  background: #5C0808;
+
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 100px;
+ font-size-adjust: auto;
+  font-family: "Arial", "Verdana", "Garamond";
+}
+#centrar{
+  position: absolute;
+  top:8%;
+  left:15%;
+  color: white;
+  font-size: 45px;
+}
+
+#centrar1{
+  position: absolute;
+  top:40%;
+  left:25%;
+  color: white;
+}
+
+#centrar2{
+  position: absolute;
+  top:60%;
+  left:37%;
 }
