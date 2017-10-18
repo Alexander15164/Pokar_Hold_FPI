@@ -5,6 +5,7 @@
 
       document.getElementById("primera").style.display="none";
       document.getElementById("segundaI").style.display="block";
+
   }
 //funcion para validar el ingreso de jugadores
   function ingresoJugadores() {
@@ -21,6 +22,7 @@
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
       document.getElementById("j1").style.display="block";
+
   }
 //Muestra la mesa distribuida
   function cargarTercera(){
@@ -30,12 +32,18 @@
     document.getElementById("tercera").style.display="block";
   }
   //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+  function apuestas(){
+    var iApustaJ=document.getElementById("apuesta").value;
+    return iApustaJ;
+  }
+  function totalApuesta(){
 
-
-   function cargarTercera(){
-     console.log("llego aqui");
-     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
-     document.getElementById("segundaII").style.display="none";
-     document.getElementById("tercera").style.display="block";
-     posicionamiento();
-   }
+  }
+/////////////////////////////
+  function cargarTercera(){
+    console.log("llego aqui");
+    document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+    document.getElementById("segundaII").style.display="none";
+    document.getElementById("tercera").style.display="block";
+    posicionamiento();
+  }
