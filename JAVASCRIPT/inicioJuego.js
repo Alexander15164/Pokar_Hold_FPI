@@ -22,9 +22,11 @@ function jugadores() {
     var sNombre = document.getElementById("jugador").value;
     var iApuesta = document.getElementById("apuesta").value;
     var sPosicion = "div"+(iControlador+2);
-    console.log(sPosicion);
+    // test
+    //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
-    console.log(oJugadores[iControlador].nombre);
+    // test
+    //console.log(oJugadores[iControlador].nombre);
     //console.log(oJugadores[iControlador].puesto);
     limpiar();
     iControlador= iControlador + 1;
@@ -36,7 +38,8 @@ function controlador(iControl,iJugadores) {
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
   document.getElementById("empezar").disabled = false;
-  console.log(oJugadores[2].nombre);
+  //test
+  //console.log(oJugadores[2].nombre);
 }else {
   return ;
 }
@@ -45,6 +48,12 @@ if (iControl==iJugadores) {
 function limpiar() {
   document.getElementById("apuesta").value = " ";
   document.getElementById("jugador").value = " ";
+}
+function posicionamiento() {
+  var iJugadores = numero();
+  for (var i = 0; i < iJugadores; i++) {
+    document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
+  }
 }
 
 function llenarCartasDisponibles() {

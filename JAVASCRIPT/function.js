@@ -28,4 +28,5 @@
      document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
      document.getElementById("segundaII").style.display="none";
      document.getElementById("tercera").style.display="block";
+     posicionamiento();
    }
