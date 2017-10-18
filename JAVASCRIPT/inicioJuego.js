@@ -2,16 +2,16 @@
 //Para index.html
 var p;
 var cartasDisponibles;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
+//=======
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
->>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
+//>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
 //Para jugadores.html
 
 function botonJugar(){
@@ -30,8 +30,8 @@ function jugadores() {
     //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
     // test
-    //console.log(oJugadores[iControlador].nombre);
-    //console.log(oJugadores[iControlador].puesto);
+    console.log(oJugadores[iControlador].nombre);
+    console.log(oJugadores[iControlador].puesto);
     limpiar();
     iControlador= iControlador + 1;
     controlador(iControlador,iJugadores);
