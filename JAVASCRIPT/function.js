@@ -17,16 +17,23 @@
   }
 //Despliega los jugadores ingresados
   function formIngreso(){
+    console.log("entro aqui");
+    var jugadores=document.getElementById("jugadores").value;
+    if (jugadores>=2 && jugadores<=10 && jugadores!=null) {
+
       document.body.style.backgroundImage="url(PICTURES/477025.jpg)";
       document.getElementById("segundaI").style.display="none";
-      document.getElementById("segundaII").style.display="block";
-      var dato=document.getElementById("jugadores").value;
-      document.getElementById("j1").style.display="block";
+      document.getElementById("tercera").style.display="block";
+
+      }
+      else {
+        document.getElementById("indicacion").style.display="block";
+
+      }
 
   }
 //Muestra la mesa distribuida
   function cargarTercera(){
-    console.log("llego aqui");
     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
     document.getElementById("segundaII").style.display="none";
     document.getElementById("tercera").style.display="block";
@@ -39,11 +46,36 @@
   function totalApuesta(){
 
   }
-/////////////////////////////
   function cargarTercera(){
-    console.log("llego aqui");
     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
     document.getElementById("segundaII").style.display="none";
     document.getElementById("tercera").style.display="block";
     posicionamiento();
+  }
+
+  function formPrincipal(){
+
+    document.body.style.backgroundImage="url(PICTURES/poker2.jpg)";
+    document.getElementById("segundaI").style.display="none";
+    document.getElementById("primera").style.display="block";
+
+  }
+
+  function formIngresaapuesta(){
+    //oculta primer ingreso de datos
+    console.log("entro aqui");
+    var jugadores=document.getElementById("jugadores").value;
+    if (jugadores>=2 && jugadores<=10 && jugadores!=null) {
+    document.getElementById("texto1").style.display="none";
+    document.getElementById("jugadores").style.display="none";
+    document.getElementById("jugar").style.display="none";
+    document.getElementById("regresar").style.display="none";
+    //muestra segundo ingreso de datos
+    document.getElementById("texto2").style.display="block";
+    document.getElementById("apuesta").style.display="block";
+    document.getElementById("jugar2").style.display="none";
+    document.getElementById("regresar2").style.display="none";
+    document.getElementById("indicacion").style.display="none";}
+    else {
+      document.getElementById("indicacion").style.display="block";}
   }
