@@ -31,47 +31,8 @@ function jugadores() {
     //console.log(oJugadores[iControlador].nombre);
     iControlador= iControlador + 1;
   }
-<<<<<<< HEAD
-  }
-//posiciona al jugador en un div  de forma ordenada en la mesa de izquierda a derecha
-=======
-//desabilita los botones de la toma de estos para el control de numero de jugadores
-function controlador(iControl,iJugadores) {
-if (iControl==iJugadores) {
-  document.getElementById("siguiente").disabled = true;
-  document.getElementById("empezar").disabled = false;
-  //test
-  //console.log(oJugadores[0].carta1.valor);
+}
 
-}else {
-  return ;
-}if (iControl==iJugadores) {
-    document.getElementById("siguiente").disabled = true;
-    document.getElementById("empezar").disabled = false;
-    document.getElementById("jugador").disabled=true;
-    document.getElementById("apuesta").disabled=true;
-  }else {
-    return ;
-  }
-  if (iControl==iJugadores) {
-      document.getElementById("siguiente").disabled = true;
-      document.getElementById("empezar").disabled = false;
-      document.getElementById("jugador").disabled=true;
-      document.getElementById("apuesta").disabled=true;
-      //document.getElementById("sumaJugador").innerHTML="Fin";
-      //document.getElementById("cantidadApuesta").innerHTML="Fin";
-      //test
-      //console.log(oJugadores[2].nombre);
-    }else {
-      return ;
-    }
-}
-//limpia los controles HTML
-function limpiar() {
-  document.getElementById("apuesta").value = " ";
-  document.getElementById("jugador").value = " ";
-}
->>>>>>> ceb76efbe702e6b7a42e9f298ebfebaa95261a71
 function posicionamiento() {
   var iJugadores = numero();
   for (var i = 0; i < iJugadores; i++) {
