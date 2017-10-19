@@ -10,86 +10,35 @@ function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
-//Para jugadores.html
-function botonJugar(){
-  p = document.getElementById("principal");
-  cartasDisponibles = new Array();
-  //llenarCartasDisponibles();    // test
-    //console.log(oJugadores[iControlador].nombre);
-    //console.log(oJugadores[iControlador].puesto);
+//Toma la apuesta inicial
+function apuesta() {
+  var iApuesta = document.getElementsById("apuesta").value;
+  return iApuesta;
 }
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
-var iSumaJugador=2;
 function jugadores() {
+    var iApuesta  = apuesta();
     var iJugadores = numero();
-    var sNombre = document.getElementById("jugador").value;
-    var iApuesta = document.getElementById("apuesta").value;
+    while (iControlador < iJugadores) {
+    var sNombre = "jugador "+(iControlador+1);
+    var iApuesta = iApuesta;
     var sPosicion = "div"+(iControlador+2);
-
     // test
     //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
     // test
     //console.log(oJugadores[iControlador].nombre);
-    limpiar();
     iControlador= iControlador + 1;
-    controlador(iControlador,iJugadores);
-
-    document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
-    iSumaJugador++;
   }
-//desabilita los botones de la toma de estos para el control de numero de jugadores
-function controlador(iControl,iJugadores) {
-<<<<<<< HEAD
-//<<<<<<< HEAD
-if (iControl==iJugadores) {
-  document.getElementById("siguiente").disabled = true;
-  document.getElementById("empezar").disabled = false;
-  //test
-  //console.log(oJugadores[0].carta1.valor);
-
-}else {
-  return ;
-}if (iControl==iJugadores) {
-    document.getElementById("siguiente").disabled = true;
-    document.getElementById("empezar").disabled = false;
-    document.getElementById("jugador").disabled=true;
-    document.getElementById("apuesta").disabled=true;
-    //document.getElementById("sumaJugador").innerHTML="Fin";
-    //document.getElementById("cantidadApuesta").innerHTML="Fin";
-    //test
-    //console.log(oJugadores[2].nombre);
-  }else {
-    return ;
   }
-=======
-  if (iControl==iJugadores) {
-      document.getElementById("siguiente").disabled = true;
-      document.getElementById("empezar").disabled = false;
-      document.getElementById("jugador").disabled=true;
-      document.getElementById("apuesta").disabled=true;
-      //document.getElementById("sumaJugador").innerHTML="Fin";
-      //document.getElementById("cantidadApuesta").innerHTML="Fin";
-      //test
-      //console.log(oJugadores[2].nombre);
-    }else {
-      return ;
-    }
->>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
-}
-//limpia los controles HTML
-function limpiar() {
-  document.getElementById("apuesta").value = " ";
-  document.getElementById("jugador").value = " ";
-}
+//posiciona al jugador en un div  de forma ordenada en la mesa de izquierda a derecha
 function posicionamiento() {
   var iJugadores = numero();
   for (var i = 0; i < iJugadores; i++) {
     document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
-
 //llenador de cartas en un arreglo global
 function llenarCartasDisponibles() {
   var iPosicion = 0
@@ -126,14 +75,13 @@ function obtenerFamilia(){
   var familia = Math.ceil(Math.random()*3+1);
   return familia;
 }
-
-function probar() {
-  for (var i = 0; i < cartasDisponibles.length; i++) {
-    p.innerHTML += cartasDisponibles[i]+"</br>";
+//sistema de posicionsmiento de imagenes
+function imagenes(){
+  var iJugadores = numero();
+  for (var i = 0; i < iJugadores ; i++) {
+    document.getElementById(oJugadores[i].puesto).innerHTML = oJugadores[i].carta1.direccion;
   }
 }
-//sistema de posicionsmiento de imagenes
-function imagenes(){}
 
 function cartas() {
   this.familia = obtenerFamilia();
@@ -163,7 +111,6 @@ function darCartas() {
   for (var i = 0; i < oCartas.length; i++) {
     console.log(oCartas[i].familia);
     console.log(oCartas[i].valor);
-
   }
 }*/
 function Verifcador(oCart) {
