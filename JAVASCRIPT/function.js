@@ -79,14 +79,14 @@
     var jugadores=document.getElementById("jugadores").value;
     var apuestana=document.getElementById("apuesta").values;
 
-    if (jugadores>=2 && jugadores<=10 ) {
-console.log("entro aqui2");
+    if (jugadores>=2 && jugadores<=10) {
+        console.log("entro aqui2");
+        fJugadores();
         document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
-
         document.getElementById("segundaI").style.display="none";
         document.getElementById("tercera").style.display="block";
-
     }
+
     posicionamiento();
     imagenes();
 console.log("entro aqui222");
