@@ -33,9 +33,36 @@
       }
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+>>>>>>> 0c314e8acb3ec9d4019c155b69cbc2b4bf112c77
+>>>>>>> ceb76efbe702e6b7a42e9f298ebfebaa95261a71
       document.getElementById("j1").style.display="block";
   }
+<<<<<<< HEAD
   //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+=======
+>>>>>>> bd171a02e7fc69a6036350b88aa2f360f0af9764
+
+=======
+>>>>>>> b2689fd804c2e02a406f1c80eb7c224f467014f3
+      document.getElementById("j1").style.display="block";
+      //document.getElementById("j1").style.display="block";
+  }
+<<<<<<< HEAD
+//Muestra la mesa distribuida
+  function cargarTercera(){
+    document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+    document.getElementById("segundaII").style.display="none";
+    document.getElementById("tercera").style.display="block";
+=======
+//Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+>>>>>>> ceb76efbe702e6b7a42e9f298ebfebaa95261a71
   function apostar() {
       //este es el input de las apuestas
     var iApuesta = document.getElementById("apostarJug").value;
@@ -54,9 +81,36 @@
     var iApustaJ=document.getElementById("apuesta").value;
     return iApustaJ;
   }
+<<<<<<< HEAD
   function totalApuesta(){
 
   }
+=======
+
+   function cargarTercera(){
+     console.log("llego aqui");
+     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+     document.getElementById("segundaII").style.display="none";
+     document.getElementById("tercera").style.display="block";
+     posicionamiento();
+   }
+<<<<<<< HEAD
+=======
+//>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
+
+  function totalApuesta(){
+
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 0c314e8acb3ec9d4019c155b69cbc2b4bf112c77
+>>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
+>>>>>>> b2689fd804c2e02a406f1c80eb7c224f467014f3
+/////////////////////////////
+
+//Muestra la mesa distribuida
+>>>>>>> bd171a02e7fc69a6036350b88aa2f360f0af9764
+>>>>>>> ceb76efbe702e6b7a42e9f298ebfebaa95261a71
   function cargarTercera(){
     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
     document.getElementById("segundaII").style.display="none";
