@@ -15,7 +15,7 @@ function numero() {
 function botonJugar(){
   p = document.getElementById("principal");
   cartasDisponibles = new Array();
-  llenarCartasDisponibles();    // test
+  //llenarCartasDisponibles();    // test
     //console.log(oJugadores[iControlador].nombre);
     //console.log(oJugadores[iControlador].puesto);
 }
@@ -27,12 +27,12 @@ function jugadores() {
     var sNombre = document.getElementById("jugador").value;
     var iApuesta = document.getElementById("apuesta").value;
     var sPosicion = "div"+(iControlador+2);
+
     // test
     //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
     // test
     //console.log(oJugadores[iControlador].nombre);
-    //console.log(oJugadores[iControlador].carta1);
     limpiar();
     iControlador= iControlador + 1;
     controlador(iControlador,iJugadores);
@@ -48,8 +48,7 @@ if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
   document.getElementById("empezar").disabled = false;
   //test
-  //console.log(oJugadores[2].nombre);
-  console.log(oJugadores[2].carta1);
+  //console.log(oJugadores[0].carta1.valor);
 
 }else {
   return ;
@@ -77,32 +76,32 @@ function posicionamiento() {
     document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
+
 //llenador de cartas en un arreglo global
 function llenarCartasDisponibles() {
-  var iIteracion = 0;
-while (iIteracion < 52) {
-  var oCarta = new cartas();
-if (iIteracion==0) {
-  oCartas[iIteracion]= oCarta;
-  iIteracion= iIteracion+1;
-}else {
-  if (oCarta.valor != oCartas[iIteracion-1].valor && oCarta.familia != oCartas[iIteracion-1].familia) {
-      oCartas[iIteracion]= oCarta;
-      iIteracion= iIteracion+1;
+  var iPosicion = 0
+  while (iPosicion < 52) {
+    var oCart = new cartas();
+    if (iPosicion == 0) {
+    oCartas.push(oCart);
+    iPosicion = iPosicion + 1;
   }else {
-  }
+    var bBoolean = Verifcador(oCart);
+    if (bBoolean == false) {
+      oCartas.push(oCart);
+      iPosicion = iPosicion + 1;
+    }
 }
-}
-imprimir();
   }
-
-function Jugador(sNombre,iApusta,sPuesto) {
+//imprimir();
+}
+  function Jugador(sNombre,iApusta,sPuesto) {
   this.nombre = sNombre;
   this.apuesta = iApusta;
   this.carta1 = darCartas();
   this.carta2 = darCartas();
   this.puesto = sPuesto;
-}
+  }
 
 function obtenerCarta(){
   var carta = Math.ceil(Math.random()*13+1);
@@ -126,15 +125,15 @@ function cartas() {
   this.familia = obtenerFamilia();
   this.valor = obtenerCarta();
   this.direccion = obtenerDirecion(this.familia,this.valor);
-  this.color = obtenerColor(this.familia);
+  //this.color = obtenerColor(this.familia);
 }
-function obtenerColor(iFamilia) {
+/*function obtenerColor(iFamilia) {
   if (iFamilia==0 || iFamilia==2) {
     return 1;//rojo
   }else {
     return 2;//negro
   }
-}
+}*/
 function obtenerDirecion(sFamilia,sValor) {
 sValor = String(sValor);
 sFamilia = String(sFamilia);
@@ -146,9 +145,21 @@ function darCartas() {
   return iCarta;
 }
 //testing
-function imprimir() {
+/*function imprimir() {
   for (var i = 0; i < oCartas.length; i++) {
-    console.log(oCartas[i].familia+oCartas[i].valor);
-  
+    console.log(oCartas[i].familia);
+    console.log(oCartas[i].valor);
+
   }
+}*/
+function Verifcador(oCart) {
+  var iTamano = oCartas.lenght
+  var bVerdad = false;
+  for (var i = 0; i < iTamano; i++) {
+  if (oCart.valor == oCartas[i].valor && oCart.familia == oCartas[i].familia) {
+    console.log("son iguales");
+    bVerdad=true;
+    return bVerdad;
+  }
+}return bVerdad;
 }
