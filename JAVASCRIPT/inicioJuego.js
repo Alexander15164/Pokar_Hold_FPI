@@ -41,8 +41,6 @@ function jugadores() {
   }
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
-<<<<<<< HEAD
-//<<<<<<< HEAD
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
   document.getElementById("empezar").disabled = false;
@@ -56,14 +54,9 @@ if (iControl==iJugadores) {
     document.getElementById("empezar").disabled = false;
     document.getElementById("jugador").disabled=true;
     document.getElementById("apuesta").disabled=true;
-    //document.getElementById("sumaJugador").innerHTML="Fin";
-    //document.getElementById("cantidadApuesta").innerHTML="Fin";
-    //test
-    //console.log(oJugadores[2].nombre);
   }else {
     return ;
   }
-=======
   if (iControl==iJugadores) {
       document.getElementById("siguiente").disabled = true;
       document.getElementById("empezar").disabled = false;
@@ -76,7 +69,6 @@ if (iControl==iJugadores) {
     }else {
       return ;
     }
->>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
 }
 //limpia los controles HTML
 function limpiar() {
