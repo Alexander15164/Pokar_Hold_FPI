@@ -1,4 +1,4 @@
-//Heho por: Edwin Figueroa
+//Hecho por: Edwin Figueroa
 //Para index.html
 var p;
 var cartasDisponibles;
@@ -16,10 +16,13 @@ function numero() {
 function botonJugar(){
   p = document.getElementById("principal");
   cartasDisponibles = new Array();
-  llenarCartasDisponibles();
+  llenarCartasDisponibles();    // test
+    //console.log(oJugadores[iControlador].nombre);
+    //console.log(oJugadores[iControlador].puesto);
 }
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
+var iSumaJugador=2;
 function jugadores() {
     var iJugadores = numero();
     var sNombre = document.getElementById("jugador").value;
@@ -34,6 +37,9 @@ function jugadores() {
     limpiar();
     iControlador= iControlador + 1;
     controlador(iControlador,iJugadores);
+
+    document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
+    iSumaJugador++;
   }
 
 //desabilita los botones de la toma de estos para el control de numero de jugadores
@@ -41,6 +47,10 @@ function controlador(iControl,iJugadores) {
   if (iControl==iJugadores) {
     document.getElementById("siguiente").disabled = true;
     document.getElementById("empezar").disabled = false;
+    document.getElementById("jugador").disabled=true;
+    document.getElementById("apuesta").disabled=true;
+    //document.getElementById("sumaJugador").innerHTML="Fin";
+    //document.getElementById("cantidadApuesta").innerHTML="Fin";
     //test
     //console.log(oJugadores[2].nombre);
   }else {
