@@ -77,18 +77,19 @@
   function cargarTercera(){
     console.log("entro aqui");
     var jugadores=document.getElementById("jugadores").value;
-    if (jugadores>=2 && jugadores<=10 && jugadores!=null) {
-    document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+    var apuestana=document.getElementById("apuesta").values;
 
-    document.getElementById("segundaI").style.display="none";
-    document.getElementById("tercera").style.display="block"; }
-    else {
-    document.getElementById("indicacion").style.display="block";}
+    if (jugadores>=2 && jugadores<=10 ) {
+console.log("entro aqui2");
+        document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
 
+        document.getElementById("segundaI").style.display="none";
+        document.getElementById("tercera").style.display="block";
 
+    }
     posicionamiento();
     imagenes();
-
+console.log("entro aqui222");
   }
 //monzon
   function formPrincipal(){
@@ -98,27 +99,3 @@
     document.getElementById("primera").style.display="block";
 
   }
-//monzon
-  function formIngresaapuesta(){
-    //oculta primer ingreso de datos
-    console.log("entro aqui");
-    var jugadores=document.getElementById("jugadores").value;
-    if (jugadores>=2 && jugadores<=10 && jugadores!=null) {
-    document.getElementById("texto1").style.display="none";
-    document.getElementById("jugadores").style.display="none";
-    document.getElementById("jugar").style.display="none";
-    document.getElementById("regresar").style.display="none";
-    //muestra segundo ingreso de datos
-    document.getElementById("texto2").style.display="block";
-    document.getElementById("apuesta").style.display="block";
-
-    document.getElementById("jugar1").style.display="none";
-    document.getElementById("regresarjugadores").style.display="none";
-    document.getElementById("jugar").style.display="none";
-    document.getElementById("regresarjugadores").style.display="none";
-
-    document.getElementById("indicacion").style.display="none";}
-
-    else {
-      document.getElementById("indicacion").style.display="block";}
-    }

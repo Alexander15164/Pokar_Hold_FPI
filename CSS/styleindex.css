@@ -110,7 +110,7 @@ body{
 #texto1{
   position: absolute;
   top:43%;
-  left:33.5%;
+  left:23%;
   font-size:26px;
   color: black;
 }
@@ -118,13 +118,20 @@ body{
 #texto2{
   position: absolute;
   top:43%;
-  left:63%;
+  left:52%;
   font-size:26px;
   color: black;
 
 }
 #apuesta{
-
+  position: absolute;
+  top:58% !important;
+  left:52% !important;
+}
+#jugadores{
+  position: absolute;
+  top:58% !important;
+  left:22% !important;
 }
 .jugado{
   position: absolute;

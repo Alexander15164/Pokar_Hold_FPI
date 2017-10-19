@@ -32,17 +32,16 @@
         <label for="jugadores" id="texto1" class="textos">¿Cuántos jugarán?</label>
 
         <input id="jugadores"class="jugado" type="number" autofocus required max="10" min="2" maxlength="2"/>
-
-        <input id="jugadores" class="jugado" type="number"step="0.01" autofocus required max="10" min="2" maxlength="2">
-
         <div id="indicacion">
-        *El numero minimo de jugadores es 2 y el maximo es 10
+      
+        </div>
+
         <label for="apuesta" id="texto2" class="textos">¿Cúal es la apuesta?</label>
-        <input id="apuesta" type="number" class="jugado"autofocus required  min="1"/>
+        <input id="apuesta" type="number" class="jugado" required  min="1"/>
         <div id="indicacion2">
-        *La apuesta debe ser mayor de 0
+
         </div>
-        </div>
+
         <input type="button" class="btnprimario" value="Siguiente" id="ingresarapuesta" onclick="cargarTercera()" />
         <input type="button" class="btnprimario" value="Regresar" id="regresar" onclick="formPrincipal()" />
         </form>
