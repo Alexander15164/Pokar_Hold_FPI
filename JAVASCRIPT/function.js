@@ -42,12 +42,6 @@
     }
 //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
 
-
-      document.getElementById("segundaII").style.display="block";
-      var dato=document.getElementById("jugadores").value;
-      document.getElementById("j1").style.display="block";
-  }
-
 //Muestra la mesa distribuida
 
 //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
