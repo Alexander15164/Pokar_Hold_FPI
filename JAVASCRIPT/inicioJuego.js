@@ -10,16 +10,13 @@ function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
-<<<<<<< HEAD
 
 
-=======
 //Toma la apuesta inicial
 function apuesta() {
   var iApuesta = document.getElementsById("apuesta").value;
   return iApuesta;
 }
->>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
 function jugadores() {
@@ -35,7 +32,7 @@ function jugadores() {
     // test
     //console.log(oJugadores[iControlador].nombre);
     iControlador= iControlador + 1;
-<<<<<<< HEAD
+
     controlador(iControlador,iJugadores);
 
     document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
@@ -84,9 +81,9 @@ if (iControl==iJugadores) {
 function limpiar() {
   document.getElementById("apuesta").value = " ";
   document.getElementById("jugador").value = " ";
-=======
+
   }
->>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
+
 }
 
 function posicionamiento() {
