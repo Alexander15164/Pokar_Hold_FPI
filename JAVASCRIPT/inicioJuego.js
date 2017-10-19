@@ -10,24 +10,32 @@ function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
+<<<<<<< HEAD
 
 
+=======
+//Toma la apuesta inicial
+function apuesta() {
+  var iApuesta = document.getElementsById("apuesta").value;
+  return iApuesta;
+}
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
-var iSumaJugador=2;
 function jugadores() {
+    var iApuesta  = apuesta();
     var iJugadores = numero();
-    var sNombre = document.getElementById("jugador").value;
-    var iApuesta = document.getElementById("apuesta").value;
+    while (iControlador < iJugadores) {
+    var sNombre = "jugador "+(iControlador+1);
+    var iApuesta = iApuesta;
     var sPosicion = "div"+(iControlador+2);
-
     // test
     //console.log(sPosicion);
     oJugadores[iControlador] = new Jugador(sNombre,iApuesta,sPosicion);
     // test
     //console.log(oJugadores[iControlador].nombre);
-    limpiar();
     iControlador= iControlador + 1;
+<<<<<<< HEAD
     controlador(iControlador,iJugadores);
 
     document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
@@ -76,14 +84,17 @@ if (iControl==iJugadores) {
 function limpiar() {
   document.getElementById("apuesta").value = " ";
   document.getElementById("jugador").value = " ";
+=======
+  }
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
 }
+
 function posicionamiento() {
   var iJugadores = numero();
   for (var i = 0; i < iJugadores; i++) {
     document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
-
 //llenador de cartas en un arreglo global
 function llenarCartasDisponibles() {
   var iPosicion = 0
@@ -120,14 +131,13 @@ function obtenerFamilia(){
   var familia = Math.ceil(Math.random()*3+1);
   return familia;
 }
-
-function probar() {
-  for (var i = 0; i < cartasDisponibles.length; i++) {
-    p.innerHTML += cartasDisponibles[i]+"</br>";
+//sistema de posicionsmiento de imagenes
+function imagenes(){
+  var iJugadores = numero();
+  for (var i = 0; i < iJugadores ; i++) {
+    document.getElementById(oJugadores[i].puesto).innerHTML = oJugadores[i].carta1.direccion;
   }
 }
-//sistema de posicionsmiento de imagenes
-function imagenes(){}
 
 function cartas() {
   this.familia = obtenerFamilia();
@@ -157,7 +167,6 @@ function darCartas() {
   for (var i = 0; i < oCartas.length; i++) {
     console.log(oCartas[i].familia);
     console.log(oCartas[i].valor);
-
   }
 }*/
 function Verifcador(oCart) {

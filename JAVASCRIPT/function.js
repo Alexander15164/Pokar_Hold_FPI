@@ -28,7 +28,10 @@
 
       document.body.style.backgroundImage="url(PICTURES/477025.jpg)";
       document.getElementById("segundaI").style.display="none";
+<<<<<<< HEAD
 
+=======
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
       document.getElementById("tercera").style.display="block";
 
       }
@@ -36,9 +39,17 @@
         document.getElementById("indicacion").style.display="block";
 
       }
+<<<<<<< HEAD
 
     }
 //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+=======
+      document.getElementById("segundaII").style.display="block";
+      var dato=document.getElementById("jugadores").value;
+      document.getElementById("j1").style.display="block";
+  }
+
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
   function apostar() {
       //este es el input de las apuestas
     var iApuesta = document.getElementById("apostarJug").value;
@@ -51,6 +62,7 @@
     dineroTotal+=iApuesta;
     p.innerHTML = "dinero: "+dineroTotal;
     //verificarFlop();
+<<<<<<< HEAD
 
   }
   //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
@@ -72,17 +84,28 @@
   function totalApuesta(){}
 //carga pantalla de JUEGOS
 //monzon
+=======
+  }
+  //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
   function cargarTercera(){
     console.log("entro aqui");
     var jugadores=document.getElementById("jugadores").value;
     if (jugadores>=2 && jugadores<=10 && jugadores!=null) {
     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+<<<<<<< HEAD
     document.getElementById("segundaI").style.display="none";
     document.getElementById("tercera").style.display="block"; }
     else {
     document.getElementById("indicacion").style.display="block";}
 
+=======
+    document.getElementById("segundaII").style.display="none";
+    document.getElementById("tercera").style.display="block";
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
     posicionamiento();
+    imagenes();
 
   }
 //monzon
@@ -106,10 +129,16 @@
     //muestra segundo ingreso de datos
     document.getElementById("texto2").style.display="block";
     document.getElementById("apuesta").style.display="block";
+<<<<<<< HEAD
     document.getElementById("jugar1").style.display="none";
     document.getElementById("regresarjugadores").style.display="none";
     document.getElementById("indicacion").style.display="none";
     }
+=======
+    document.getElementById("jugar").style.display="none";
+    document.getElementById("regresarjugadores").style.display="none";
+    document.getElementById("indicacion").style.display="none";}
+>>>>>>> db9494a1abe677e63753f95c9965df051e750e0e
     else {
       document.getElementById("indicacion").style.display="block";}
     }
