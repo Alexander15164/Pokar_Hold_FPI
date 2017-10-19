@@ -10,14 +10,8 @@ function numero() {
   var iJugadores= document.getElementById("jugadores").value;
   return iJugadores;
 }
-//Para jugadores.html
-function botonJugar(){
-  p = document.getElementById("principal");
-  cartasDisponibles = new Array();
-  //llenarCartasDisponibles();    // test
-    //console.log(oJugadores[iControlador].nombre);
-    //console.log(oJugadores[iControlador].puesto);
-}
+
+
 //para el control del ingreso a datos de los jugadores
 var iControlador = 0; //variable controladora para la funcion jugadores
 var iSumaJugador=2;
@@ -41,7 +35,7 @@ function jugadores() {
   }
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
-<<<<<<< HEAD
+//<<<<<< HEAD
 //<<<<<<< HEAD
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
@@ -63,7 +57,7 @@ if (iControl==iJugadores) {
   }else {
     return ;
   }
-=======
+//=======
   if (iControl==iJugadores) {
       document.getElementById("siguiente").disabled = true;
       document.getElementById("empezar").disabled = false;
@@ -76,7 +70,7 @@ if (iControl==iJugadores) {
     }else {
       return ;
     }
->>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
+//>>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
 }
 //limpia los controles HTML
 function limpiar() {
