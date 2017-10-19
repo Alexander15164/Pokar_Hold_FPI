@@ -29,6 +29,7 @@
       document.body.style.backgroundImage="url(PICTURES/477025.jpg)";
       document.getElementById("segundaI").style.display="none";
 
+
       document.getElementById("tercera").style.display="block";
 
       }
@@ -42,6 +43,15 @@
 //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
 
 
+      document.getElementById("segundaII").style.display="block";
+      var dato=document.getElementById("jugadores").value;
+      document.getElementById("j1").style.display="block";
+  }
+
+//Muestra la mesa distribuida
+
+//Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+
   function apostar() {
       //este es el input de las apuestas
     var iApuesta = document.getElementById("apostarJug").value;
@@ -54,6 +64,7 @@
     dineroTotal+=iApuesta;
     p.innerHTML = "dinero: "+dineroTotal;
     //verificarFlop();
+
 
 
   }
@@ -109,6 +120,9 @@
 
     document.getElementById("jugar1").style.display="none";
     document.getElementById("regresarjugadores").style.display="none";
+    document.getElementById("jugar").style.display="none";
+    document.getElementById("regresarjugadores").style.display="none";
+
     document.getElementById("indicacion").style.display="none";}
 
     else {
