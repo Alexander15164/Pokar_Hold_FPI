@@ -1,4 +1,3 @@
-//Hecho por: Edwin Figueroa
 //Para index.html
 var p;
 var cartasDisponibles;
