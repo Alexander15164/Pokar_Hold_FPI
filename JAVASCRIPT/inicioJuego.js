@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-=======
-//<<<<<<< HEAD
-//Heho por: Edwin Figueroa
+
 //Modificado por katiro
->>>>>>> e399cd9b68ceaeb40486db2520f95b8ccbf5cc9d
 //Para index.html
 var p;
 var cartasDisponibles;
-<<<<<<< HEAD
 var oCartas = new Array();
-=======
-
-
-
->>>>>>> 28fae16329b9998426f4a65bdd031654a6e613dc
 var oJugadores= new Array();
 //toma el numero de jugadores en forma global para el uso de esta variable en funciones
 function numero() {
@@ -49,31 +39,20 @@ function jugadores() {
     document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
     iSumaJugador++;
   }
-
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
-//<<<<<<< HEAD
-if (iControl==iJugadores) {
-  document.getElementById("siguiente").disabled = true;
-  document.getElementById("empezar").disabled = false;
-  //test
-  //console.log(oJugadores[2].nombre);
-  console.log(oJugadores[2].carta1);
-
-}else {
-  return ;
-}if (iControl==iJugadores) {
-    document.getElementById("siguiente").disabled = true;
-    document.getElementById("empezar").disabled = false;
-    document.getElementById("jugador").disabled=true;
-    document.getElementById("apuesta").disabled=true;
-    //document.getElementById("sumaJugador").innerHTML="Fin";
-    //document.getElementById("cantidadApuesta").innerHTML="Fin";
-    //test
-    //console.log(oJugadores[2].nombre);
-  }else {
-    return ;
-  }
+  if (iControl==iJugadores) {
+      document.getElementById("siguiente").disabled = true;
+      document.getElementById("empezar").disabled = false;
+      document.getElementById("jugador").disabled=true;
+      document.getElementById("apuesta").disabled=true;
+      //document.getElementById("sumaJugador").innerHTML="Fin";
+      //document.getElementById("cantidadApuesta").innerHTML="Fin";
+      //test
+      //console.log(oJugadores[2].nombre);
+    }else {
+      return ;
+    }
 }
 //limpia los controles HTML
 function limpiar() {
@@ -106,6 +85,7 @@ function Jugador(sNombre,iApusta,sPuesto) {
   this.puesto = sPuesto;
 }
 
+
 function obtenerCarta(){
   var carta = Math.ceil(Math.random()*13+1);
   return carta;
@@ -127,4 +107,4 @@ function imagenes(){
   for (var i = 0; i < iJugadores; i++) {
 
   }
-    }
+}

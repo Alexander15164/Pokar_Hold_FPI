@@ -21,48 +21,27 @@
       document.getElementById("segundaI").style.display="none";
       document.getElementById("segundaII").style.display="block";
       var dato=document.getElementById("jugadores").value;
-<<<<<<< HEAD
-//<<<<<<< HEAD
       document.getElementById("j1").style.display="block";
-=======
       document.getElementById("j1").style.display="block";
-
->>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
   }
-//Muestra la mesa distribuida
-  function cargarTercera(){
-    console.log("llego aqui");
-    document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
-    document.getElementById("segundaII").style.display="none";
-    document.getElementById("tercera").style.display="block";
+//Haciendo una prueba para capturar los valores de las apuestas de cada jugador
+  function apostar() {
+      //este es el input de las apuestas
+    var iApuesta = document.getElementById("apostarJug").value;
+      // este es un elemento para mostrar el dinero disponible de cada jugador
+    var p = document.getElementById("dineroDisponible");
+    iApuesta = parseInt(iApuesta);
+      //turno es el indice que indica a que jugador le corresponde el turno
+    jugadores[turno].dinero -= iApuesta;
+      //dineroTotal es el de el centro de la mesa
+    dineroTotal+=iApuesta;
+    p.innerHTML = "dinero: "+dineroTotal;
+    //verificarFlop();
   }
-  //Haciendo una prueba para capturar los valores de las apuestas de cada jugador
-  function apuestas(){
-<<<<<<< HEAD
 
-  }
-//=======
-    //  for (var i = 1; i <=dato; i++) {
-    
-   //}
-
-
-   function cargarTercera(){
-     console.log("llego aqui");
-     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
-     document.getElementById("segundaII").style.display="none";
-     document.getElementById("tercera").style.display="block";
-     posicionamiento();
-   }
-//>>>>>>> 39a7e528ae0d0cb14b32acae0a2f5ca7c6ebebd3
-=======
-    var iApustaJ=document.getElementById("apuesta").value;
-    return iApustaJ;
-  }
-  function totalApuesta(){
-
-  }
 /////////////////////////////
+
+//Muestra la mesa distribuida
   function cargarTercera(){
     console.log("llego aqui");
     document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
@@ -70,4 +49,3 @@
     document.getElementById("tercera").style.display="block";
     posicionamiento();
   }
->>>>>>> b3e930ff34bb6aec127e3d559a16c04dba03b508
