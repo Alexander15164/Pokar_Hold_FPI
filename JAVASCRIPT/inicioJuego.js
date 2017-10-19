@@ -1,5 +1,4 @@
-//<<<<<<< HEAD
-//Heho por: Edwin Figueroa
+
 //Modificado por katiro
 //Para index.html
 var p;
@@ -40,9 +39,9 @@ function jugadores() {
     document.getElementById("sumaJugador").innerHTML="Jugador "+(iSumaJugador)+":";
     iSumaJugador++;
   }
-
 //desabilita los botones de la toma de estos para el control de numero de jugadores
 function controlador(iControl,iJugadores) {
+<<<<<<< HEAD
 //<<<<<<< HEAD
 if (iControl==iJugadores) {
   document.getElementById("siguiente").disabled = true;
@@ -64,6 +63,20 @@ if (iControl==iJugadores) {
   }else {
     return ;
   }
+=======
+  if (iControl==iJugadores) {
+      document.getElementById("siguiente").disabled = true;
+      document.getElementById("empezar").disabled = false;
+      document.getElementById("jugador").disabled=true;
+      document.getElementById("apuesta").disabled=true;
+      //document.getElementById("sumaJugador").innerHTML="Fin";
+      //document.getElementById("cantidadApuesta").innerHTML="Fin";
+      //test
+      //console.log(oJugadores[2].nombre);
+    }else {
+      return ;
+    }
+>>>>>>> b9606904497e7c07762dcff9619b33679d01a4e2
 }
 //limpia los controles HTML
 function limpiar() {
@@ -102,6 +115,7 @@ function llenarCartasDisponibles() {
   this.carta2 = darCartas();
   this.puesto = sPuesto;
   }
+
 
 function obtenerCarta(){
   var carta = Math.ceil(Math.random()*13+1);
