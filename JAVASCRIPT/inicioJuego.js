@@ -70,21 +70,12 @@ function llenarCartasDisponibles() {
   this.puesto = sPuesto;
   }
 
-var oCartasLibres0= [1,2,3,4,5,6,7,8,9,10,11,12,13];
-var oCartasLibres1= [1,2,3,4,5,6,7,8,9,10,11,12,13];
-var oCartasLibres2= [1,2,3,4,5,6,7,8,9,10,11,12,13];
-var oCartasLibres3= [1,2,3,4,5,6,7,8,9,10,11,12,13];
-function obtenerCarta(familia){
+
+function obtenerCarta(){
   var carta = Math.floor(Math.random()*13+1);
-  if(verificar(carta,familia)){
-  oCartasLibres+familia+[carta]=0;
-
-
-  }
   console.log("mi carta es la numero: " +carta);
   return carta;
 }
-
 
 function obtenerFamilia(){
   var familia = Math.floor(Math.random()*3+0);
@@ -102,7 +93,7 @@ function imagenes(){
     document.getElementById("sb"+dato).style.backgroundSize="cover";
     document.getElementById("sb"+dato).style.transition=" width 0.5s";
     document.getElementById("sb"+dato).style.transition=" height 0.5s";
-    document.getElementById("nb"+(j +1)).innerHTML="jugador"+(j+1);
+
 
 
     console.log(oJugadores[j].carta1.direccion );
@@ -121,7 +112,7 @@ function imagenes(){
 
 function cartas() {
   this.familia = obtenerFamilia();
-  this.valor = obtenerCarta(this.familia);
+  this.valor = obtenerCarta();
   this.direccion = obtenerDirecion(this.familia,this.valor);
   //this.color = obtenerColor(this.familia);
 }

@@ -77,7 +77,7 @@
   function cargarTercera(){
 
     var jugadores=document.getElementById("jugadores").value;
-    var apuestana=document.getElementById("apuesta").values;
+    var apuestana=document.getElementById("apuesta").value;
 
     if (jugadores>=2 && jugadores<=10) {
 
