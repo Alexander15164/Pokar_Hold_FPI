@@ -8,13 +8,21 @@ function floop() {
   for (var i = 0; i < 3; i++) {
     oCartasComunes[i] = darCartas();
   }
+  e=0;
+  cargar();
 }
 function turn() {
   oCartasComunes[3]= darCartas();
+  e=0;
+  cargar();
 }
 function river() {
   oCartasComunes[4]= darCartas();
+  e=0;
+  cargar();
 }
-function unirArray() {
-  
+function showdown() {
+  ganadores();
+  e=0;
+  cargar();
 }

@@ -5,7 +5,17 @@ var iTurno=0;
 var ronda=0;
 var bDesi;
 var repetir=0;
+var pase=0;
+var e = 0;
 function cargar() {
+
+  if(e==0){
+    e++;
+    document.getElementById('floop').style.display = "none";
+    document.getElementById('turn').style.display = "none";
+    document.getElementById('river').style.display = "none";
+    document.getElementById('showdown').style.display = "none";
+  }else {
   var iJugadores = numero();
 if (ronda==0 && iTurno<2) {
 /*  if (iTurno==0 || iTurno==1) {**/
@@ -13,8 +23,9 @@ if (ronda==0 && iTurno<2) {
     document.getElementById("pasar").disabled=true;
     document.getElementById("retirarse").disabled=true;
     document.getElementById("dineroDisponible").innerHTML="Tu dinero es: "+oJugadores[iTurno].apuesta;
-    var dineroApostado=document.getElementById("apostarJug").value;
-    oJugadores[iTurno].apuesta-=dineroApostado;
+    var dineroApostado = document.getElementById("apostarJug").value;
+    console.log(dineroApostado);
+    oJugadores[iTurno].apuesta=oJugadores[iTurno].apuesta - dineroApostado;
     document.getElementById("apostarJug").value=0;
     bDesi = verificarApuestas(dineroApostado,iJugadores,iTurno);
 }else{
@@ -23,7 +34,7 @@ if (ronda==0 && iTurno<2) {
     document.getElementById("retirarse").disabled=false;
     document.getElementById("dineroDisponible").innerHTML="Tu dinero es: "+oJugadores[iTurno].apuesta;
     var dineroApostado=document.getElementById("apostarJug").value;
-    oJugadores[iTurno].apuesta-=dineroApostado;
+    oJugadores[iTurno].apuesta=oJugadores[iTurno].apuesta - dineroApostado;
     document.getElementById("apostarJug").value=0;
     bDesi = verificarApuestas(dineroApostado,iJugadores,iTurno);
     console.log(bDesi);
@@ -39,6 +50,7 @@ if (ronda==0 && iTurno<2) {
     //console.log("bDesi "+bDesi);
     activador(bDesi);
   }
+}
 }
 function verificarApuestas(iApuesta,iJugadores,iTurn){
   var bDecision=false;
@@ -91,6 +103,19 @@ function activador(bDecision) {
     console.log("pasastes");
     ronda++
     repetir=0;
+    if (pase==0) {
+      document.getElementById('floop').style.display = "block";
+      pase++;
+    }else if (pase==1) {
+      document.getElementById('turn').style.display = "block";
+      pase++;
+    }else if (pase==2) {
+      document.getElementById("river").style.display = "block";
+      pase++;
+    }else if (pase==3) {
+      document.getElementById('showdown').style.display = "block";
+      pase++;
+    }
   }else {
     repetir++;
   }
