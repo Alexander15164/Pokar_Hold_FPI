@@ -41,7 +41,7 @@ function limpiar() {
 function posicionamiento() {
   var iJugadores = numero();
   for (var i = 0; i < iJugadores; i++) {
-    document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
+    //document.getElementById(oJugadores[i].puesto).innerHTML = "jugador"+(i+1);
   }
 }
 //llenador de cartas en un arreglo global
@@ -70,27 +70,58 @@ function llenarCartasDisponibles() {
   this.puesto = sPuesto;
   }
 
+var oCartasLibres0= [1,2,3,4,5,6,7,8,9,10,11,12,13];
+var oCartasLibres1= [1,2,3,4,5,6,7,8,9,10,11,12,13];
+var oCartasLibres2= [1,2,3,4,5,6,7,8,9,10,11,12,13];
+var oCartasLibres3= [1,2,3,4,5,6,7,8,9,10,11,12,13];
+function obtenerCarta(familia){
+  var carta = Math.floor(Math.random()*13+1);
+  if(verificar(carta,familia)){
+  oCartasLibres+familia+[carta]=0;
 
-function obtenerCarta(){
-  var carta = Math.ceil(Math.random()*13+1);
+
+  }
+  console.log("mi carta es la numero: " +carta);
   return carta;
 }
 
+
 function obtenerFamilia(){
-  var familia = Math.ceil(Math.random()*3+1);
+  var familia = Math.floor(Math.random()*3+0);
+  console.log("mi familia es :"+familia);
   return familia;
 }
 //sistema de posicionsmiento de imagenes
 function imagenes(){
   var iJugadores = numero();
-  for (var i = 0; i < iJugadores ; i++) {
-    document.getElementById(oJugadores[i].puesto).innerHTML = oJugadores[i].carta1.direccion;
+  var j=0;
+  var dato=0;
+  while (j<iJugadores) {
+    dato++;
+    document.getElementById("sb"+dato).style.backgroundImage ="url("+oJugadores[j].carta1.direccion+")";
+    document.getElementById("sb"+dato).style.backgroundSize="cover";
+    document.getElementById("sb"+dato).style.transition=" width 0.5s";
+    document.getElementById("sb"+dato).style.transition=" height 0.5s";
+    document.getElementById("nb"+(j +1)).innerHTML="jugador"+(j+1);
+
+
+    console.log(oJugadores[j].carta1.direccion );
+    dato++;
+    document.getElementById("sb"+dato).style.backgroundImage ="url("+oJugadores[j].carta2.direccion+")";
+    document.getElementById("sb"+dato).style.backgroundSize="cover";
+    document.getElementById("sb"+dato).style.transition=" width 0.5s";
+    document.getElementById("sb"+dato).style.transition=" height 0.5s";
+
+    console.log(oJugadores[j].carta2.direccion);
+    j++;
   }
-}
+
+  }
+
 
 function cartas() {
   this.familia = obtenerFamilia();
-  this.valor = obtenerCarta();
+  this.valor = obtenerCarta(this.familia);
   this.direccion = obtenerDirecion(this.familia,this.valor);
   //this.color = obtenerColor(this.familia);
 }

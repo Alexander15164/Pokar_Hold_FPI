@@ -23,7 +23,7 @@
       <input type="button" class="btnprimario" value="Ayuda" id="btnAyuda"/>
       <br>
     </div>
-    <div id="segundaI">
+    <div id="segundaI" class="segunda">
         <h1 id="centrar">Juego de Poker Texas Hold'em</h1>
 
         <div id="centrar11">
@@ -47,68 +47,95 @@
         <input type="button" class="btnprimario" value="Regresar" id="regresar" onclick="formPrincipal()" />
         </form>
     </div>
-    <div id="segundaII">
-      <div class="jugador" id="j1">
-        <label for="jugador" id="sumaJugador" >Jugador 1:</label>
-        <input type="text" id="jugador" value="">
-        <br><br>
-        <label id="cantidadApuesta">Cantidad $:</label>
-        <input type="text" id="apuesta" value="">
-        <br><br>
-      </div>
-      <input id="siguiente" type="button" name="" value="Siguiente jugador" onclick="jugadores()"/>
-      <input id="empezar" type="button" name="" value="Empezar el juego" onclick="cargarTercera()" disabled/>
-    </div>
     <div id="tercera">
+      <div class="segunda">
+
+      </div>
       <div class="capasJ1" id="div2">
-        JUGADOR 1
+        <p id="nb1"></p>
+        <div class="subcap1" id="sb1">
+        </div>
+        <div class="subcap1" id="sb2">
+        </div>
       </div>
       <diV class="capasJ1" id="div3">
-        JUGADOR 2
+        <p id="nb2"></p>
+        <div class="subcap1" id="sb3">
+        </div>
+        <div class="subcap1" id="sb4">
+        </div>
       </div>
       <div class="capasJ1" id="div4">
-        JUGADOR 3
+        <p id="nb3"></p>
+        <div class="subcap1" id="sb5">
+        </div>
+        <div class="subcap1" id="sb6">
+        </div>
       </div>
       <div class="capasJ1" id="div5">
-        JUGADOR 4
+        <p id="nb4"></p>
+        <div class="subcap1" id="sb7">
+        </div>
+        <div class="subcap1" id="sb8">
+        </div>
       </div>
-      <div class="capasJ2" id="div6">
-        JUGADOR5
+      <div class="capasJ1" id="div6">
+        <p id="nb5"></p>
+        <div class="subcap1" id="sb9">
+        </div>
+        <div class="subcap1" id="sb10">
+        </div>
       </div>
       <div class="capascentral"id="divcentral">
-        CENTRO DE CARTAS
+
       </div>
-      <div class="capasJ3" id="div7">
-        JUGADOR 6
+      <div class="capasJ1" id="div7">
+        <p id="nb6"></p>
+        <div class="subcap1" id="sb11">
+        </div>
+        <div class="subcap1" id="sb12">
+        </div>
       </div>
-      <div class="capasJ4" id="div8">
-        JUGADOR7</div>
-      <div class="capasJ4" id="div9">
-       JUGADOR 8
+      <div class="capasJ1" id="div8">
+        <p id="nb7"></p>
+        <div class="subcap1" id="sb13">
+        </div>
+        <div class="subcap1" id="sb14">
+        </div>
       </div>
-      <div class="capasJ4" id="div10">
-       JUGADOR 9
+      <div class="capasJ1" id="div9">
+        <p id="n81"></p>
+        <div class="subcap1" id="sb15">
+        </div>
+        <div class="subcap1" id="sb16">
+        </div>
       </div>
-      <div class="capasJ4" id="div11">
-       JUGADOR 1O
+      <div class="capasJ1" id="div10">
+        <p id="nb9"></p>
+        <div class="subcap1" id="sb17">
+        </div>
+        <div class="subcap1" id="sb18">
+        </div>
+      </div>
+      <div class="capasJ1" id="div11">
+        <p id="nb10"></p>
+        <div class="subcap1" id="sb19">
+        </div>
+        <div class="subcap1" id="sb20">
+        </div>
       </div>
       <div class="capasB" id="btn">
-        BOTONES <br>
-        <input type="submit" name="apostar" value="Apostar" id="apostarJ" onclick="cargar()">
+        <input type="submit" name="apostar" class="btntercero"value="Apostar" id="apostarJ" onclick="cargar()">
         <input type="text" name="apostarJug" value="" id="apostarJug" autofocus>
-        <br>
-        <input type="submit" name="pasar" value="Pasar" id="pasar" onclick="cargar()">
-        <br>
-        <input type="submit" name="retirarse" value="Retirarse" id="retirarse" onclick="cargar()">
-        <br>
+        <input type="submit" name="pasar" class="btntercero"value="Pasar" id="pasar" onclick="cargar()">
+        <input type="submit" name="retirarse"class="btntercero" value="Retirarse" id="retirarse" onclick="cargar()">
         <p id="dineroDisponible"></p>
-
-
-
-
-
-
-
+      </div>
+      <div id="btnExtras">
+        <input type="submit" name="floop" class="btntercero"value="Floop" id="floop" onclick="">
+        <input type="submit" name="turn" class="btntercero"value="Turn" id="turn" onclick="">
+        <input type="submit" name="river" class="btntercero"value="River" id="river" onclick="">
+        <input type="submit" name="showdown" class="btntercero"value="Showdown" id="showdown" onclick="">
       </div>
     </div>
 

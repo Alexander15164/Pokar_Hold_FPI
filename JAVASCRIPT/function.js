@@ -82,14 +82,18 @@
     if (jugadores>=2 && jugadores<=10) {
 
         fJugadores();
-        document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+        document.body.style.backgroundColor="#354560";
+        //document.body.style.backgroundImage="url(PICTURES/fondo4.jpg)";
+        document.body.style.backgroundImage="none";
         document.getElementById("segundaI").style.display="none";
         document.getElementById("tercera").style.display="block";
+        //document.getElementsByClassName("subcap1").backgroundImage("PICTURES/carta1.jpg")
         cargar();
+        posicionamiento();
+          imagenes();
     }
 
-    posicionamiento();
-    imagenes();
+
   }
 //monzon
   function formPrincipal(){
