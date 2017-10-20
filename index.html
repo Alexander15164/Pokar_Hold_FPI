@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="CSS/styleindex.css">
     <script type="text/javascript" src="JAVASCRIPT/function.js"></script>
     <script type="text/javascript" src="JAVASCRIPT/inicioJuego.js"></script>
+    <script type="text/javascript" src="JAVASCRIPT/apuestasTurnos.js"></script>
     <title>index</title>
 
   </head>
@@ -33,7 +34,7 @@
 
         <input id="jugadores"class="jugado" type="number" autofocus required max="10" min="2" maxlength="2"/>
         <div id="indicacion">
-      
+
         </div>
 
         <label for="apuesta" id="texto2" class="textos">¿Cúal es la apuesta?</label>
@@ -92,13 +93,21 @@
        JUGADOR 1O
       </div>
       <div class="capasB" id="btn">
-        BOTONES
-        <input type="submit" name="apostar" value="Apostar" id="apostarJ">
-        <input type="text" name="apostarJug" value="" id="apostarJug">
-
-        <input type="submit" name="igualar" value="Igualar">
-        <input type="submit" name="retirarse" value="Retirarse">
+        BOTONES <br>
+        <input type="submit" name="apostar" value="Apostar" id="apostarJ" onclick="cargar()">
+        <input type="text" name="apostarJug" value="" id="apostarJug" autofocus>
+        <br>
+        <input type="submit" name="pasar" value="Pasar" id="pasar" onclick="cargar()">
+        <br>
+        <input type="submit" name="retirarse" value="Retirarse" id="retirarse" onclick="cargar()">
+        <br>
         <p id="dineroDisponible"></p>
+
+
+
+
+
+
 
       </div>
     </div>

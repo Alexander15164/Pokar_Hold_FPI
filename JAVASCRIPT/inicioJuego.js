@@ -62,9 +62,9 @@ function llenarCartasDisponibles() {
   }
 //imprimir();
 }
-  function Jugador(sNombre,iApusta,sPuesto) {
+  function Jugador(sNombre,iApuesta,sPuesto) {
   this.nombre = sNombre;
-  this.apuesta = iApusta;
+  this.apuesta = iApuesta;
   this.carta1 = darCartas();
   this.carta2 = darCartas();
   this.puesto = sPuesto;
